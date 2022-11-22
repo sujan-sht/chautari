@@ -1,0 +1,248 @@
+.category-page {
+    margin: 3rem 0;
+}
+
+/* .news-container {
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+} */
+
+.news-container-main h6.category-heading {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 23px;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 0 0 5px 0;
+}
+
+.news-container-main h6.category-heading::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    background-color: var(--secondary-color);
+    width: 100px;
+    top: 100%;
+    left: 0;
+}
+
+/*LEFT SIDE*/
+.category-news {
+    display: flex;
+    flex-wrap: nowrap;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    margin-bottom: 2rem;
+}
+
+.category-link .category-news .news-extended h4 {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.category-link:hover .category-news .news-extended h4 {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.category-link .category-news .news-extended p {
+    color: var(--black-color);
+    font-size: 18px;
+}
+
+.news-image img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-by {
+    margin-bottom: 10px;
+}
+
+.news-writer {
+    margin-right: 20px;
+}
+
+.news-writer img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.news-writer h6 {
+    color: var(--black-color);
+}
+
+.news-date {
+    color: var(--black-color);
+}
+
+.news-writer,
+.news-date {
+    cursor: default;
+}
+
+.pagination-div {
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: var(--white-color);
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.page-item .page-link.page-prev,
+.page-item .page-link.page-next {
+    background: var(--secondary-color);
+    color: var(--white-color);
+}
+
+.page-link {
+    margin: 0 5px;
+}
+
+.sidebar-news img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.sidebar-news {
+    position: relative;
+}
+
+.sidebar-news .sidebar-news-heading {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    color: var(--white-color);
+}
+
+.medium-card {
+    margin-bottom: 1rem;
+}
+
+.card img:hover {
+    opacity: 0.9;
+}
+
+.card img {
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.8rem;
+}
+
+.medium-card .card-img {
+    height: 215px;
+}
+
+
+.card-img-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1.25rem;
+}
+
+.card .card-img-overlay {
+    top: auto;
+    bottom: 0;
+    left: 0;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-title {
+    text-shadow: 1px 1px 1px var(--black-color);
+}
+
+.card .card-title {
+    margin-bottom: 0;
+}
+
+.card .card-img-overlay .card-title a {
+    color: var(--white-color);
+    transition: 0.2s;
+}
+
+.card-title a {
+    color: var(--white-color);
+}
+
+.card .card-img-overlay .time {
+    color: var(--white-color);
+}
+
+.time::before {
+    content: '\f017';
+    font-family: 'font awesome 5 free';
+    font-weight: 600;
+    padding-right: 0.5rem;
+    font-size: 0.65rem;
+    color: var(--secondary-color);
+}
+
+.card-img-overlay .time::before {
+    color: var(--white-color);
+}
+
+.card .card-img-overlay .card-title a:hover {
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 2px var(--black-color);
+    text-decoration: none;
+}
+
+.medium-card .card-img {
+    height: 215px;
+}
+
+.mini-news {
+    position: sticky;
+    top: 70px;
+}
+
+.additional-news {
+    margin-top: 20px;
+}
+
+.additional-news h6 {
+    margin-bottom: 30px;
+}
+
+.additional-news h6 a {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 23px;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 0 0 5px 0;
+}
+
+.additional-news h6 a::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    background-color: var(--secondary-color);
+    width: 100px;
+    top: 100%;
+    left: 0;
+}
+
+.category-big-news img {
+    height: 445px;
+}

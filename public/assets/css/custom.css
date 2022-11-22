@@ -1,0 +1,229 @@
+.img-upload-preview {
+    border: 2px dashed #ddd;
+    height: 160px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.img-upload-preview .close-btn {
+    right: 3px;
+    top: 3px;
+    background: rgb(237, 60, 32);
+    border-radius: 3px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    padding: 0;
+}
+
+.cat {
+    margin: 4px;
+    background-color: #104068;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    overflow: hidden;
+    float: left;
+}
+
+.cat label {
+    float: left;
+    line-height: 3em;
+    width: 8em;
+    height: 3em;
+}
+
+.cat label span {
+    text-align: center;
+    padding: 3px 0;
+    display: block;
+}
+
+.cat label input {
+    position: absolute;
+    display: none;
+    color: #fff !important;
+}
+
+/* selects all of the text within the input element and changes the color of the text */
+.cat label input+span {
+    color: #fff;
+}
+
+/* This will declare how a selected input will look giving generic properties */
+.cat input:checked+span {
+    color: #ffffff;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+}
+
+/*
+  This following statements selects each category individually that contains an input element that is a checkbox and is checked (or selected) and chabges the background color of the span element.
+  */
+
+.action input:checked+span {
+    background-color: #f75a1b;
+}
+
+.comedy input:checked+span {
+    background-color: #1bb8f7;
+}
+
+.crime input:checked+span {
+    background-color: #d9d65d;
+}
+
+.bootstrap-tagsinput .tag {
+    margin-right: 2px;
+    color: white !important;
+    background-color: #4137ce;
+    padding: 0.2em 0.6em 0.3em;
+    font-size: 100%;
+    font-weight: 700;
+    vertical-align: baseline;
+    border-radius: 0.25em;
+}
+
+/*ANUSH CSS*/
+.toggle-box {
+    display: none;
+}
+
+.link {
+    cursor: pointer;
+    position: relative;
+}
+
+.toggle-box+.link+.hidden-input {
+    display: none;
+}
+
+.toggle-box:checked+.link+.hidden-input {
+    display: block;
+    margin-top: 20px;
+    position: absolute;
+    top: 50%;
+    right: -17%;
+    display: flex;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+}
+
+.link {
+    margin: 4px;
+    background-color: #104068;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    overflow: hidden;
+    color: white;
+    float: left;
+    padding: 16px 32px;
+    text-transform: uppercase;
+}
+
+.breadcrumb-top a i,
+.breadcrumb-top a {
+    color: #104068;
+}
+
+.breadcrumb-top {
+    font-weight: 700;
+}
+
+.select-option {
+    padding: 10px 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background: #fff;
+    margin-bottom: 30px;
+}
+
+.card {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card-header {
+    background: #104068 !important;
+    align-items: center;
+    color: white;
+}
+
+.card-title {
+    margin-bottom: 0 !important;
+}
+
+.btn-seo {
+    background: #104068 !important;
+    color: white;
+    border-color: #104068 !important;
+}
+
+.btn-primary.focus,
+.btn-primary:focus {
+    box-shadow: none;
+}
+
+.date-input {
+    margin-bottom: 20px;
+}
+
+.post-buttons {
+    list-style: none;
+    justify-content: flex-end;
+}
+
+.post-buttons li {
+    margin-right: 20px;
+}
+
+.post-buttons li:last-child {
+    margin-right: 0;
+}
+
+.sorting_bar select {
+    padding: 7px;
+    border-radius: 0.5rem;
+}
+
+.colors {
+    display: none;
+}
+
+
+.check-all-button {
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
+
+}
+
+.check-all-button input {
+    padding-right: 5px;
+}
+
+.user-panel {
+    align-items: center;
+}
+
+.user-panel img {
+    height: 50px;
+    width: 50px;
+}
+
+.visit-web a img{
+    height: 32px !important;
+    width: 32px !important;
+}
+/*ANUSH CSS*/

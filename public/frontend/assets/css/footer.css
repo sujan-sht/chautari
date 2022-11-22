@@ -1,0 +1,228 @@
+.main-footer {
+    background: var(--white-color);
+    border-top: 1px solid var(--primary-color);
+}
+
+.main-footer [class^="col-"]:not(:last-child) {
+    border-right: 1px solid var(--primary-color);
+}
+
+.footer-desc {
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.main-footer .footer-team-detail [class^="col-"]:not(:last-child),
+.main-footer .download-part [class^="col-"]:not(:last-child) {
+    border-right: none;
+}
+
+.team-position h6,
+.team-position-name h6 {
+    font-size: 16px;
+}
+
+.footer-img img {
+    width: 100%;
+    object-fit: contain;
+    padding-top: 20px;
+}
+
+.site-detail ul {
+    line-height: 35px;
+    margin: 1rem 0;
+}
+.site-detail ul li span{
+    font-weight: bold;
+    margin-right: 3px;
+}
+.footer-links {
+    margin: 2rem 0;
+}
+
+.footer-links h5,
+.download-section h5,
+.links-listing ul li a:hover {
+    color: var(--primary-color);
+}
+
+.links-listing ul {
+    line-height: 38px;
+}
+
+.links-listing ul li a,
+.team-position h6 {
+    color: var(--font-color);
+    font-weight: 700;
+}
+
+.team-position-name h6 {
+    font-weight: 700;
+}
+
+.further-info {
+    margin-top: 35px;
+}
+
+.enquiry {
+    font-size: 18px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    border: 1px solid var(--primary-color);
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+.enquiry:hover {
+    border: 1px solid var(--secondary-color);
+    background: var(--secondary-color);
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.download-part {
+    margin: 2rem 0;
+}
+
+.download-through img {
+    padding-right: 10px;
+    height: 50px;
+}
+
+.copyright {
+    background: #F1F1F1;
+}
+
+.copyright-part a {
+    color: #E08F3D;
+}
+
+.copyright-part a:hover {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.copyright {
+    background: var(--primary-color);
+    padding: 15px 0;
+}
+
+.copyright-part p {
+    text-align: center;
+    font-size: 18px;
+    color: var(--white-color);
+}
+
+.social-buttons__button {
+    margin: 10px 20px 0 0;
+}
+
+.social-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid var(--white-color);
+    text-decoration: none;
+}
+
+.social-button:hover {
+    text-decoration: none;
+}
+
+.social-button__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border-radius: 100%;
+    background: none;
+    text-align: center;
+}
+
+.social-button i,
+.social-button svg {
+    position: relative;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.social-button i {
+    font-size: 14px;
+    color: var(--white-color);
+}
+
+/* .social-button:hover i {
+    color: var(--white-color);
+} */
+
+.social-button svg {
+    height: 40%;
+    width: 40%;
+}
+
+.social-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 100%;
+    transition: 0.3s;
+}
+
+.social-button:focus,
+.social-button:hover {
+    color: #fff;
+    border: none;
+}
+
+.social-button:focus::after,
+.social-button:hover::after {
+    width: 100%;
+    height: 100%;
+    margin-left: -50%;
+}
+
+.social-button--facebook {
+    color: #3b5999;
+}
+
+.social-button--facebook::after {
+    background: #3b5999;
+}
+
+.social-button--instagram {
+    color: rgb(251, 57, 88);
+}
+
+.social-button--instagram::after {
+    background: radial-gradient(circle at 30% 107%,
+            #fdf497 0%,
+            #fdf497 5%,
+            #fd5949 45%,
+            #d6249f 60%,
+            #285aeb 90%);
+}
+
+.social-button--youtube {
+    color: rgb(255, 0, 0);
+}
+
+.social-button--youtube::after {
+    background: rgb(255, 0, 0);
+}

@@ -1,0 +1,19 @@
+.terms-section h2,
+.terms-section p,
+.terms-section h5,
+.terms-section ul li {
+    margin-bottom: 15px;
+}
+
+.privacy-section h2,
+.privacy-section p,
+.privacy-section h4 {
+    margin-bottom: 15px;
+}
+
+.privacy-section,
+.terms-section {
+    background: #f3f3f3;
+    margin: 2rem 0;
+    padding: 2rem 0;
+}

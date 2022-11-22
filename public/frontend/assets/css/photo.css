@@ -1,0 +1,26 @@
+.pic-des{
+    margin: 1.5rem 0;
+}
+.pic-title h3{
+    margin:.3rem 1.5rem;
+    font-weight: bold;
+}
+.pic-des p{
+    margin: .5rem 2rem ;
+}
+
+.photo-sec .comment-section{
+    padding:2rem 4rem;
+    border:1px solid #efefef;
+margin:1rem 0;
+background: #efee;
+}
+
+.posted{
+    text-align: right;
+color: grey;
+}
+.posted span{
+    font-weight: bold;
+    
+}
