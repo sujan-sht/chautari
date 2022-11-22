@@ -91,7 +91,6 @@ class PostController extends Controller
             'headline' => 'required',
             'category'=>'required',
             'description'=>'required',
-          	'video' => 'mimes:mp4,ogx,oga,ogv,ogg,webm|max:10240',
             // 'status'=>'required',
         ]);
 
@@ -142,8 +141,13 @@ class PostController extends Controller
             $post->fb_image= $imageName;
         }
       	
-
-        $post->video=session("path");
+        if (session("path")!=null) {
+            $post->video=session("path");
+        } else {
+            $post->video_url=$request->video;
+        }
+        
+        
       
         if($post->save()){
             session()->forget(['path']);

@@ -156,14 +156,29 @@
                                         <div class="news-short-inner-left">
                                             <a href="{{route('single_news',$posts[0]->slug)}}">
                                                 <div class="news-short-inner-image">
-                                                    @if (!empty($posts[0]->featured_img))
-                                                        @if(file_exists('uploads/featured_img/'.$posts[0]->featured_img))
-                                                            <img src="{{asset('uploads/featured_img/'.$posts[0]->featured_img)}}" class="img-fluid">
+                                                    @if ($posts[0]->video!=null)
+                                                        @if (!empty($posts[0]->featured_img))
+                                                            @if(file_exists('uploads/featured_img/'.$posts[0]->featured_img))
+                                                                <video class="card-img-top" controls poster="{{asset('uploads/featured_img/'.$post->featured_img)}}" src="{{$post->video}}">
+                                                                </video>
+                                                            @else
+                                                                <video class="card-img-top" controls poster="{{asset('placeholder.jpg')}}" src="{{$post->video}}">
+                                                                </video>
+                                                            @endif
                                                         @else
-                                                            <img src="{{asset('placeholder.jpg')}}" class="img-fluid">
+                                                            <img src="{{asset('placeholder.jpg')}}" class="card-img-top">
                                                         @endif
+                                                        
                                                     @else
-                                                        <img src="{{asset('placeholder.jpg')}}" class="img-fluid">
+                                                        @if (!empty($posts[0]->featured_img))
+                                                            @if(file_exists('uploads/featured_img/'.$posts[0]->featured_img))
+                                                                <img src="{{asset('uploads/featured_img/'.$posts[0]->featured_img)}}" class="card-img-top">
+                                                            @else
+                                                                <img src="{{asset('placeholder.jpg')}}" class="card-img-top">
+                                                            @endif
+                                                        @else
+                                                            <img src="{{asset('placeholder.jpg')}}" class="card-img-top">
+                                                        @endif
                                                     @endif
                                                 </div>
                                                 <h4>{{$posts[0]->title}}</h4>
@@ -330,23 +345,38 @@
                                     @if ($key==0)
                                     
                                     <a href="{{route('single_news',$post->slug)}}">
-                                      @if ($post->video != null)                                               
-                                      
-                                                    <video class="card-img-top" controls poster="{{asset('uploads/featured_img/'.$post->featured_img)}}" src="{{$post->video}}">
-                                                        <source src= "{{$post->video}}">
+                                        @if ($post->video!=null)
+                                            @if (!empty($post->featured_img))
+                                                @if(file_exists('uploads/featured_img/'.$post->featured_img))
+                                                
+                                                    <video class="card-img-top" controls poster="{{asset('uploads/featured_img/'.$post->featured_img)}}" src="{!! $post->video !!}">
                                                     </video>
+                                                @else
+                                                {{-- <iframe class="card-img-top" src="{!! $post->video !!}" title="{{$post->title}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen poster="{{asset('placeholder.jpg')}}"></iframe> --}}
+                                                <video class="card-img-top" controls poster="{{asset('placeholder.jpg')}}" src="{!! $post->video !!}">
+                                                </video>
+                                                    
+                                                @endif
+                                            @else
                                             
+                                            
+                                            <video class="card-img-top" controls poster="{{asset('placeholder.jpg')}}" src="{!! $post->video !!}">
+                                            </video>
+                                            @endif
+                                            
+                                        @elseif($post->video_url!=null)
+                                            <iframe width="560" height="315" src="{{$post->video_url}}" title="{{$post->title}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         @else
-                                          @if (!empty($post->featured_img))
-                                              @if(file_exists('uploads/featured_img/'.$post->featured_img))
-                                                  <img src="{{asset('uploads/featured_img/'.$post->featured_img)}}" class="card-img-top">
-                                              @else
-                                                  <img src="{{asset('placeholder.jpg')}}" class="card-img-top">
-                                              @endif
-                                          @else
-                                              <img src="{{asset('placeholder.jpg')}}" class="card-img-top">
-                                          @endif
-                                      @endif
+                                            @if (!empty($post->featured_img))
+                                                @if(file_exists('uploads/featured_img/'.$post->featured_img))
+                                                    <img src="{{asset('uploads/featured_img/'.$post->featured_img)}}" class="card-img-top">
+                                                @else
+                                                    <img src="{{asset('placeholder.jpg')}}" class="card-img-top">
+                                                @endif
+                                            @else
+                                                <img src="{{asset('placeholder.jpg')}}" class="card-img-top">
+                                            @endif
+                                        @endif
                                         
                                     <div class="card-body">
                                         <h3 class="card-text line-clamp-2 mb-2"><a href="{{route('single_news',$post->slug)}}">{{$post->title}}</a> </h3>

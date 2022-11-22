@@ -198,16 +198,37 @@
                     </div>
                     <div class="select-option">
                         <label for="video">Video</label>
-                        <div class="card-body">
-                            <div id="upload-container" class="text-center">
-                                <input type="button" value="Browse File" name="video" id="browseFile" class="btn btn-primary">
-                            </div>
-                            <div class="progress mt-3" style="height: 25px">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%; height: 100%">75%</div>
-                            </div>
-                        </div>
+                        
                         <div class="card-footer p-4" >
                             <video id="videoPreview" src="{{$post->video}}" controls style="width: 100%; height: auto"></video>
+                        </div>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link active" id="home-tab" data-toggle="tab" data-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Upload</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Add Url</button>
+                            </li>
+                            
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="card-body">
+                                <div id="upload-container" class="text-center">
+                                    <input type="button" value="Browse File" name="video" id="browseFile" class="btn btn-primary">
+                                </div>
+                                <div class="progress mt-3" style="height: 25px">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%; height: 100%">75%</div>
+                                </div>
+                                </div>
+                                <div class="card-footer p-4" >
+                                <video id="videoPreview" src="{{$post->video}}" controls style="width: 100%; height: auto"></video>
+                                </div>
+                        </div>
+                        <div class="tab-pane fade mt-3" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <input type="url" name="video" class="form-control" value="{{old('video')}}">
+                        </div>
+                        
                         </div>
                     </div>
                     <div class="select-option">
